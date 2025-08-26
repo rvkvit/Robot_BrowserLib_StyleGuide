@@ -1,0 +1,48 @@
+# Ignore VS Code settings
+.vscode/
+ 
+# Ignore output reports and logs
+log.html
+output.xml
+report.html
+screenshots/
+playwright-log.txt
+debug.log
+browserstack.err
+local.log
+
+# Ignore test runner logs and errors
+Template/testRunner/local.log
+Template/testRunner/browserstack.err
+
+# Ignore temporary or OS files
+*.pyc
+__pycache__/
+
+# Ignore Results
+results/
+browser/
+
+# Ignore virtual environments
+venv/
+.env/
+*.env
+
+# Ignore Playwright artifacts
+trace.zip
+videos/
+downloads/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore JetBrains IDE files
+.idea/
+
+# Ignore Python egg and build files
+*.egg-info/
+build/
+dist/
+
+# Ignore credentials file
+*/resources/variables/credentials.properties
