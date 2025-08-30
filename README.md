@@ -22,25 +22,65 @@ StyleGuideSIT_BrowserLib is an automated test framework for validating the UI an
 1. **Clone the repository:**
    ```sh
    git clone <your-repo-url>
-   cd StyleGuideSIT_BrowserLib
+cd StyleGuideSIT_BrowserLib
    ```
 
-2. **Install Python dependencies:**
+---
+
+## Quick Start Guide for Beginners
+
+Follow these steps to set up and run the project, even if you are new to Python or Robot Framework:
+
+### 1. Install Python
+- Download and install Python 3.11 or newer from [python.org](https://www.python.org/downloads/).
+- During installation, check "Add Python to PATH".
+
+### 2. Install Node.js
+- Download and install Node.js from [nodejs.org](https://nodejs.org/en/download/).
+
+### 3. Clone the Repository
+   ```sh
+   git clone <your-repo-url>
+   cd StyleGuideSIT_BrowserLib/Template
+   ```
+
+### 4. Create a Virtual Environment
+   ```sh
+   python -m venv .venv
+   # On Windows, activate with:
+   .\.venv\Scripts\Activate.ps1
+   # On Mac/Linux, activate with:
+   source .venv/bin/activate
+   ```
+
+### 5. Install Python Dependencies
    ```sh
    pip install -r requirements.txt
    ```
 
-3. **Install and initialize Browser library:**
+### 6. Install and Initialize Browser Library
    ```sh
-   pip install robotframework-browser
    rfbrowser init
    ```
+   This downloads the required browser binaries for Robot Framework Browser.
 
-4. **Configure credentials:**
-   - Edit `resources/variables/credentials.properties` with your test credentials.
+### 7. (Optional) Set Up Environment Variables
+- For BrowserStack, Jira, or other integrations, set environment variables or update config files as needed.
 
-5. **Set up environment variables (optional):**
-   - For BrowserStack, Jira, or other integrations, set the required environment variables or update the config files.
+### 8. Run Your First Test
+   ```sh
+   robot --outputdir results tests/
+   ```
+   This will execute all test cases in the `tests/` folder and save results in the `results/` folder.
+
+---
+
+## Troubleshooting
+
+- If you get errors about missing libraries, run `pip install -r requirements.txt` again.
+- If you get browser errors, run `rfbrowser init` again.
+- Make sure your virtual environment is activated before running any commands.
+- To change Python version, create your venv with the desired Python executable (e.g., `py -3.11 -m venv .venv`).
 
 ---
 
@@ -119,9 +159,11 @@ Set `Browserstack_Execution=True` in your environment or config, and provide Bro
 
 ---
 
-## Support
-
-For any help reach out to QA COE memebers:
-    
+**Guidelines:**
+- Follow Robot Framework and Python best practices.
+- Add docstrings and comments for clarity.
+- Update documentation for new features.
 
 ---
+
+

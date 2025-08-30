@@ -5,15 +5,12 @@ import os
 
 class excel_library:
 
-    #def __init__(self):
-        #self.workbook = None
 
     def read_cell(self, sheet_name, col_name):
         current_directory = os.getcwd()
         project_dir = Path(__file__).resolve().parent.parent
         print("Project Directory:", project_dir)  # Debugging print
-        #scenarios_path = project_dir / 'dataFiles' / 'scenarios.xlsx'
-        #scenarios_path = "./Template/datafiles/scenarios.xlsx"
+
 
         if os.name == 'nt':  # Windows
             scenarios_path = project_dir / 'datafiles' / 'scenarios.xlsx'
@@ -29,8 +26,6 @@ class excel_library:
     def write_cell(self, sheet_name, col_name, value):
         current_directory = os.getcwd()
         project_dir = os.path.dirname(os.path.dirname(__file__))
-        #scenarios_path = os.path.join(project_dir, 'datafiles', 'scenarios.xlsx')
-        #scenarios_path = "./Template/datafiles/scenarios.xlsx"
         if os.name == 'nt':  # Windows
             scenarios_path = os.path.join(project_dir, 'datafiles', 'scenarios.xlsx')
         else:  # Linux/Mac
